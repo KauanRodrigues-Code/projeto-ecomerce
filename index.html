@@ -4,72 +4,55 @@
   <meta charset="UTF-8">
   <title>Chaminés Premium</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- CSS NA RAIZ -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="header">
   <h1>Chaminés Premium</h1>
+
   <nav>
     <a href="#produtos">Produtos</a>
     <a href="#contato">Contato</a>
   </nav>
+
+  <div class="cart">
+    🛒 <span id="cart-count">0</span>
+  </div>
 </header>
 
-<section class="hero">
+<section class="hero animate">
   <h2>Soluções completas para sua chaminé</h2>
   <p>Utensílios resistentes, seguros e duráveis</p>
-  <a href="#produtos" class="btn">Ver produtos</a>
+  <a href="#produtos" class="btn pulse">Ver produtos</a>
 </section>
 
 <section id="produtos" class="produtos">
-  <h2>Nossos Produtos</h2>
+  <h2 class="animate">Nossos Produtos</h2>
 
-  <div class="grid">
-
-    <!-- PRODUTO 1 -->
-    <div class="card">
-      <img src="DUTO.png" alt="Duto para Chaminé">
+  <div class="cards">
+    <div class="card animate">
+      <img src="DUTO.png" alt="Duto para chaminé">
       <h3>Duto para Chaminé</h3>
-      <p>Alta resistência térmica e encaixe perfeito.</p>
-      <span>R$ 249,90</span>
-
-      <button class="btn comprar"
-        data-link="https://link.mercadopago.com.br/SEULINK1">
-        Comprar agora
-      </button>
+      <p>Alta resistência térmica</p>
+      <span>R$ 299,90</span>
+      <button onclick="addToCart()">Adicionar ao carrinho</button>
     </div>
 
-    <!-- PRODUTO 2 -->
-    <div class="card">
-      <img src="CHAPEU.png" alt="Chapéu para Chaminé">
+    <div class="card animate">
+      <img src="CHAPEU.png" alt="Chapéu para chaminé">
       <h3>Chapéu para Chaminé</h3>
-      <p>Proteção contra chuva e melhora da ventilação.</p>
+      <p>Proteção contra vento e chuva</p>
       <span>R$ 189,90</span>
-
-      <button class="btn comprar"
-        data-link="https://link.mercadopago.com.br/SEULINK2">
-        Comprar agora
-      </button>
+      <button onclick="addToCart()">Adicionar ao carrinho</button>
     </div>
-
   </div>
 </section>
 
-<!-- BOTÃO FIXO MOBILE -->
-<button id="btnMobile" class="btn-mobile">Comprar</button>
-
-<!-- TOAST -->
-<div id="toast" class="toast">Redirecionando para o pagamento...</div>
-
-<footer id="contato" class="footer">
-  <p>📲 Atendimento via WhatsApp</p>
-  <p>© 2026 - Chaminés Premium</p>
+<footer id="contato" class="footer animate">
+  <p>© 2026 Chaminés Premium • Todos os direitos reservados</p>
 </footer>
 
-<!-- JS NA RAIZ -->
-<script src="script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
