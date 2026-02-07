@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>E-commerce de Chaminés</title>
+  <title>Chaminés Premium</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -19,8 +19,8 @@
 
   <!-- HERO -->
   <section class="hero">
-    <h2>Chaminés resistentes e modernas</h2>
-    <p>Qualidade profissional para sua casa ou obra</p>
+    <h2>Qualidade e segurança para sua obra</h2>
+    <p>Chaminés resistentes, modernas e duráveis</p>
     <a href="#produtos" class="btn">Ver produtos</a>
   </section>
 
@@ -29,27 +29,29 @@
     <h2>Nossos Produtos</h2>
 
     <div class="card">
-      <img src="assets/imagens/chamine.jpg" alt="Chaminé inox">
+      <img src="assets/imagens/chamine.jpg" alt="Chaminé Inox">
       <h3>Chaminé Inox 1m</h3>
-      <p>Alta durabilidade e resistência ao calor.</p>
+      <p>Alta resistência ao calor e corrosão.</p>
       <span>R$ 299,90</span>
 
-      <!-- BOTÃO DE PAGAMENTO -->
-      <a 
-        href="https://link.mercadopago.com.br/SEULINKAQUI"
+      <button 
         class="btn comprar"
-        target="_blank"
+        data-link="https://link.mercadopago.com.br/SEULINKAQUI"
       >
         Comprar agora
-      </a>
+      </button>
     </div>
   </section>
 
-  <!-- CONTATO -->
+  <!-- TOAST -->
+  <div id="toast" class="toast">Redirecionando para o pagamento...</div>
+
+  <!-- FOOTER -->
   <footer id="contato" class="footer">
-    <p>📞 Atendimento via WhatsApp</p>
+    <p>📲 Atendimento via WhatsApp</p>
     <p>© 2026 - Chaminés Premium</p>
   </footer>
 
+  <script src="js/script.js"></script>
 </body>
 </html>
