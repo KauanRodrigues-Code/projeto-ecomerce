@@ -2,24 +2,26 @@ const botoesComprar = document.querySelectorAll('.comprar');
 const toast = document.getElementById('toast');
 const btnMobile = document.getElementById('btnMobile');
 
-let linkSelecionado = '';
+let linkSelecionado = null;
 
+// Clique no produto
 botoesComprar.forEach(botao => {
   botao.addEventListener('click', () => {
     linkSelecionado = botao.dataset.link;
-    mostrarPagamento();
+    iniciarPagamento();
   });
 });
 
+// Botão fixo mobile
 btnMobile.addEventListener('click', () => {
-  if (linkSelecionado === '') {
+  if (!linkSelecionado) {
     alert('Selecione um produto primeiro');
     return;
   }
-  mostrarPagamento();
+  iniciarPagamento();
 });
 
-function mostrarPagamento() {
+function iniciarPagamento() {
   toast.style.display = 'block';
 
   setTimeout(() => {
