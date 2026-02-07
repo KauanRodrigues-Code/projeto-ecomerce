@@ -1,30 +1,20 @@
-const botoesComprar = document.querySelectorAll('.comprar');
-const toast = document.getElementById('toast');
-const btnMobile = document.getElementById('btnMobile');
+// Animação ao rolar
+const elements = document.querySelectorAll('.animate');
 
-let linkSelecionado = null;
-
-// Clique no produto
-botoesComprar.forEach(botao => {
-  botao.addEventListener('click', () => {
-    linkSelecionado = botao.dataset.link;
-    iniciarPagamento();
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
   });
 });
 
-// Botão fixo mobile
-btnMobile.addEventListener('click', () => {
-  if (!linkSelecionado) {
-    alert('Selecione um produto primeiro');
-    return;
-  }
-  iniciarPagamento();
-});
+elements.forEach(el => observer.observe(el));
 
-function iniciarPagamento() {
-  toast.style.display = 'block';
+// Carrinho
+let cartCount = 0;
 
-  setTimeout(() => {
-    window.location.href = linkSelecionado;
-  }, 1500);
+function addToCart() {
+  cartCount++;
+  document.getElementById('cart-count').innerText = cartCount;
 }
