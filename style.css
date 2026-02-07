@@ -1,3 +1,6 @@
+/* =========================
+   RESET
+========================= */
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +13,9 @@ body {
   color: #333;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 .header {
   background: #111;
   color: #fff;
@@ -20,13 +25,20 @@ body {
   align-items: center;
 }
 
-.header a {
+.header h1 {
+  font-size: 22px;
+}
+
+.header nav a {
   color: #fff;
   margin-left: 15px;
   text-decoration: none;
+  font-size: 14px;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 .hero {
   background: #222;
   color: #fff;
@@ -34,11 +46,19 @@ body {
   text-align: center;
 }
 
+.hero h2 {
+  font-size: 32px;
+}
+
 .hero p {
   margin-top: 10px;
+  font-size: 16px;
   opacity: 0.9;
 }
 
+/* =========================
+   BOTÕES
+========================= */
 .btn {
   display: inline-block;
   margin-top: 20px;
@@ -49,12 +69,25 @@ body {
   text-decoration: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
 }
 
-/* PRODUTOS */
+.btn:hover {
+  background: #e65c00;
+}
+
+/* =========================
+   PRODUTOS
+========================= */
 .produtos {
   padding: 50px 20px;
   text-align: center;
+}
+
+.produtos h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
 }
 
 .card {
@@ -72,16 +105,24 @@ body {
 
 .card h3 {
   margin: 15px 0 5px;
+  font-size: 20px;
+}
+
+.card p {
+  font-size: 14px;
+  opacity: 0.8;
 }
 
 .card span {
   display: block;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
   margin: 10px 0;
 }
 
-/* TOAST */
+/* =========================
+   TOAST
+========================= */
 .toast {
   position: fixed;
   bottom: 20px;
@@ -91,12 +132,92 @@ body {
   padding: 12px 20px;
   border-radius: 5px;
   display: none;
+  z-index: 999;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 .footer {
   background: #111;
   color: #fff;
   text-align: center;
   padding: 20px;
+  font-size: 14px;
+}
+
+/* =========================
+   MOBILE (até 768px)
+========================= */
+@media (max-width: 768px) {
+
+  /* HEADER */
+  .header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .header nav {
+    display: flex;
+    gap: 15px;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 50px 15px;
+  }
+
+  .hero h2 {
+    font-size: 22px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  /* BOTÕES */
+  .btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  /* PRODUTOS */
+  .produtos {
+    padding: 30px 15px;
+  }
+
+  .produtos h2 {
+    font-size: 22px;
+  }
+
+  .card {
+    max-width: 100%;
+    margin: 20px 0;
+  }
+
+  .card h3 {
+    font-size: 18px;
+  }
+
+  .card p {
+    font-size: 14px;
+  }
+
+  .card span {
+    font-size: 24px;
+  }
+
+  /* TOAST */
+  .toast {
+    left: 10px;
+    right: 10px;
+    text-align: center;
+  }
+
+  /* FOOTER */
+  .footer {
+    font-size: 13px;
+  }
 }
